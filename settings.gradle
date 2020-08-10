@@ -1,0 +1,2 @@
+rootProject.name='secured_pincode'
+include ':app'
