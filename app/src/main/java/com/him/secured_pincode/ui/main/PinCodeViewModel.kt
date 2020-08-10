@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 class PinCodeViewModel : ViewModel() {
 
     val pinCode = MutableLiveData<String>().also {
-        it.value = "12312"
+        it.value = ""
     }
 
     val numPadListener = object : NumPadListener {

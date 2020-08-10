@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">secured_pincode</string>
+    <string name="delete"><![CDATA[<-]]></string>
 </resources>

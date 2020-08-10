@@ -115,7 +115,7 @@
                 style="@style/passCodeButton"
                 android:layout_marginStart="24dp"
                 android:onClick="@{(v) -> numPadListener.onEraseClicked()}"
-                android:text="-" />
+                android:text="@string/delete" />
 
         </LinearLayout>
 
