@@ -1,30 +1,37 @@
 package com.him.secured_pincode.ui.main
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.him.secured_pincode.R
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.him.secured_pincode.databinding.MainFragmentBinding
+import com.him.secured_pincode.databinding.MainFragmentBindingImpl
 
 class PinCodeFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = PinCodeFragment()
-    }
+    lateinit var binding: MainFragmentBinding
 
     private lateinit var viewModel: PinCodeViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = MainFragmentBindingImpl.inflate(inflater)
+        viewModel = ViewModelProvider(this).get(PinCodeViewModel::class.java)
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.viewModel = viewModel
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(PinCodeViewModel::class.java)
-        // TODO: Use the ViewModel
+    }
+
+    companion object {
+        fun newInstance() = PinCodeFragment()
     }
 
 }

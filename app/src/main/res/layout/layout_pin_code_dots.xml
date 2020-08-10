@@ -59,6 +59,5 @@
             android:layout_marginStart="16dp"
             android:background="@drawable/pass_code_dot_selector"
             android:enabled="@{pinCode.length() >= 6}" />
-
     </LinearLayout>
 </layout>
