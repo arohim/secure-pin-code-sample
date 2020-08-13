@@ -26,10 +26,6 @@ class PinCodeFragment : Fragment() {
         return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-    }
-
     companion object {
         fun newInstance() = PinCodeFragment()
     }
