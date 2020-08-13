@@ -6,12 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.him.secured_pincode.databinding.MainFragmentBinding
-import com.him.secured_pincode.databinding.MainFragmentBindingImpl
+import com.him.secured_pincode.databinding.FragmentPinCodeBinding
 
 class PinCodeFragment : Fragment() {
 
-    lateinit var binding: MainFragmentBinding
+    lateinit var binding: FragmentPinCodeBinding
 
     private lateinit var viewModel: PinCodeViewModel
 
@@ -19,7 +18,7 @@ class PinCodeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = MainFragmentBindingImpl.inflate(inflater)
+        binding = FragmentPinCodeBinding.inflate(inflater)
         viewModel = ViewModelProvider(this).get(PinCodeViewModel::class.java)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
