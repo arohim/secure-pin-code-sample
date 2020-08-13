@@ -3,15 +3,9 @@
 
     <data>
 
-        <import type="android.view.View" />
-
         <variable
             name="numPadListener"
             type="com.him.secured_pincode.ui.main.NumPadListener" />
-
-        <variable
-            name="pinCode"
-            type="androidx.lifecycle.MutableLiveData&lt;java.lang.String>" />
 
     </data>
 

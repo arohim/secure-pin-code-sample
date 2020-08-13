@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center">
 
-        <TextView
+        <View
             android:id="@+id/dot1"
             android:layout_width="@dimen/pincode_dot_size"
             android:layout_height="@dimen/pincode_dot_size"
