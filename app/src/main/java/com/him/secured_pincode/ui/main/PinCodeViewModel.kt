@@ -5,9 +5,7 @@ import androidx.lifecycle.ViewModel
 
 class PinCodeViewModel : ViewModel() {
 
-    val pinCode = MutableLiveData<String>().also {
-        it.value = ""
-    }
+    val pinCode = MutableLiveData<String>()
 
     val numPadListener = object : NumPadListener {
         override fun onNumberClicked(number: Char) {
