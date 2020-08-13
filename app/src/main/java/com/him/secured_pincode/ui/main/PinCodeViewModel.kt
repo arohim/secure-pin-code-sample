@@ -9,8 +9,8 @@ class PinCodeViewModel : ViewModel() {
 
     val numPadListener = object : NumPadListener {
         override fun onNumberClicked(number: Char) {
-            val existingPassCode = pinCode.value ?: ""
-            val newPassCode = existingPassCode + number
+            val existingPinCode = pinCode.value ?: ""
+            val newPassCode = existingPinCode + number
             pinCode.postValue(newPassCode)
         }
 
