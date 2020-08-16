@@ -21,7 +21,8 @@ class PinCodeViewModel(val sharedPreferences: SharedPreferences) : ViewModel() {
                     putString(PIN_CODE_KEY, newPassCode)
                     apply()
                 }
-                securedPinCode.postValue(sharedPreferences.getString(PIN_CODE_KEY, ""))
+                val pinCodeInSharedPreference = sharedPreferences.getString(PIN_CODE_KEY, "")
+                securedPinCode.postValue(pinCodeInSharedPreference)
                 pinCode.postValue("")
             }
         }
