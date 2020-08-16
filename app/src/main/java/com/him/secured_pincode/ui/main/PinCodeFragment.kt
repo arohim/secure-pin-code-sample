@@ -20,11 +20,10 @@ class PinCodeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentPinCodeBinding.inflate(inflater)
-        context?.let {
-            val sharedPreferences = EncryptSharedPreferences.getInstance(it).sharedPreferences
-            viewModel = ViewModelProvider(this, PinCodeViewModelFactory(sharedPreferences))
-                .get(PinCodeViewModel::class.java)
-        }
+        val sharedPreferences =
+            EncryptSharedPreferences.getInstance(requireContext()).sharedPreferences
+        viewModel = ViewModelProvider(this, PinCodeViewModelFactory(sharedPreferences))
+            .get(PinCodeViewModel::class.java)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
         return binding.root
